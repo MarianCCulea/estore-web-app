@@ -27,7 +27,10 @@ function AddToCartButton({
     dispatch(addToCart(product));
   };
   return (
-    <button onClick={addItemToCart} className="mt-auto button">
+    <button
+      onClick={addItemToCart}
+      className="w-full mt-auto rounded-full button"
+    >
       Add to basket
     </button>
   );

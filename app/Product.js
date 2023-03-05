@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { StarIcon } from "@heroicons/react/24/solid";
 import AddToCartButton from "./AddToCartButton";
+import Link from "next/link";
 
 const MAX_RATING = 5;
 const MIN_RATING = 1;
@@ -16,14 +17,15 @@ function Product({ id, title, description, category, image, price }) {
       <p className="absolute text-xs italic text-gray-400 top-2 right-2">
         {category}
       </p>
-
-      <Image
-        src={image}
-        alt=""
-        height={200}
-        width={200}
-        className="self-center object-contain "
-      />
+      <Link href={`/products/${id}`}>
+        <Image
+          src={image}
+          alt=""
+          height={200}
+          width={200}
+          className="self-center object-contain "
+        />
+      </Link>
 
       <h4 className="my-3 ">{title}</h4>
       <div className="flex ">
