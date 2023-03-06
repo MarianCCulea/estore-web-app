@@ -11,7 +11,7 @@ function ProductPage({ params }) {
     <div>
       <Header />
       <section class="container px-5 py-12 mx-auto ">
-        <div class="flex flex-wrap  space-x-6">
+        <div class="flex flex-wrap  justify-between space-x-6">
           <div class="grow ">
             <div class="h-full flex items-start bg-gray-500">
               <div class="w-12 flex-shrink-0 flex flex-col text-center leading-none bg-white">
@@ -36,14 +36,15 @@ function ProductPage({ params }) {
               </div>
             </div>
           </div>{" "}
-          <div class=" lg:w-1/3  flex-auto w-64  bg-red-600">
+          <div class=" grow">
             <div class="h-full flex items-start  bg-gray-500">
               <div class="pl-6 bg-white">
-                <h1 className="text-3xl ">{product.description}</h1>
+                <h1 className="text-3xl ">{product.title}</h1>
               </div>
+              <div>{product.category}</div>
             </div>
           </div>
-          <div class=" flex-none space-y-4 w-72 ">
+          <div class=" grow-0 space-y-4 w-72 ">
             <div class=" border-gray-400 rounded-2xl border-2 flex items-start bg-gray-500">
               <div class="flex-grow px-4 py-2 space-y-2 text-2xl rounded-2xl bg-white">
                 <div className="inline-flex items-center">
@@ -51,10 +52,10 @@ function ProductPage({ params }) {
                   <h1 className="font-bold text-md">{product.price}</h1>
                 </div>
                 <h1 className="text-base">
-                  <span className="text-blue-600 ">FREE delivery </span>
+                  <span className="text-blue-700 ">FREE delivery </span>
                   <span className="font-bold ">Tuesday, March 7 </span>
                   on eligible first order. Order within
-                  <span className="text-green-700 "> 20 hrs 17 mins</span>
+                  <span className="text-green-600 "> 20 hrs 17 mins</span>
                 </h1>
 
                 <a class="inline-flex items-center text-base">
@@ -81,65 +82,69 @@ function ProductPage({ params }) {
                 </div>
 
                 <div class="flex-grow border-t border-gray-400"></div>
-                <a class="inline-flex items-center">
+                <div className="text-sm text-blue-700 ">Details</div>
+
+                <h1 className="text-base">
+                  <span className="">Return policy: </span>
+
+                  <span className="text-blue-700 ">
+                    Returnable within 30 days of receipt
+                  </span>
+                </h1>
+
+                <h1 class="inline-flex items-center text-base">
                   <input type="checkbox" />
                   <span class="flex-grow flex flex-col pl-3">
                     <span class="title-font font-medium text-gray-900">
-                      Gift wrap
+                      Add gift options
                     </span>
                   </span>
-                </a>
+                </h1>
                 <div class="flex-grow border-t border-gray-400"></div>
                 <div class="">
-                  Return policy: Returnable within 30 days of receipt
-                </div>
-                <div class="">
-                  Return policy: Returnable within 30 days of receipt
-                </div>
-                <div class="">
-                  Return policy: Returnable within 30 days of receipt
-                </div>
-                <div class="">
-                  Return policy: Returnable within 30 days of receipt
+                  <button className="w-full py-1 pl-2 text-base text-left border-2 border-gray-800 rounded-lg">
+                    Add to List
+                  </button>
                 </div>
               </div>
             </div>
 
             <div class=" border-gray-400  rounded-2xl border-2 flex items-start bg-gray-500">
-              <div class="flex-grow px-6 py-4  space-y-6 text-2xl rounded-2xl bg-white">
-                <h1>Add an Accessory:</h1>
+              <div class="flex-grow px-6 py-4  space-y-2 text-2xl rounded-2xl bg-white">
+                <h1 className="text-base font-bold text-center">
+                  Add an Accessory:
+                </h1>
                 <div class="flex-grow border-t border-gray-400"></div>
-                <h2 className="text-sm">
+                <h2 className="text-sm text-blue-700 line-clamp-3">
                   deleyCON 2 m 8K UHD-II HDMI 2.1 Nylon Cable 4320p 2160p 8K @
                   60Hz 4K @ 120Hz 7680x4320p Metal Connector Dolby DTS HDR eARC
                   CEC HDTV EthernetdeleyCON 2 m 8K UHD-II HDMI 2.1 Nylon Cable
                   4320p 2160p 8K @ 60Hz 4K @ 120Hz 7680x4320p Me…
                 </h2>
 
-                <a class="flex justify-between">
-                  <span class="">$ 10.99</span>
+                <div class="flex  justify-between ">
+                  <span class="text-red-500 -mt-1 text-base">$ 10.99</span>
 
-                  <span class="">
-                    <AddToCartButton />
+                  <span class="-mt-3">
+                    <AddToCartButton size={1} />
                   </span>
-                </a>
-
+                </div>
                 <div class="flex-grow border-t border-gray-400"></div>
 
-                <h2 className="text-sm">
+                <h2 className="text-sm text-blue-700 line-clamp-3">
                   deleyCON 2 m 8K UHD-II HDMI 2.1 Nylon Cable 4320p 2160p 8K @
                   60Hz 4K @ 120Hz 7680x4320p Metal Connector Dolby DTS HDR eARC
                   CEC HDTV EthernetdeleyCON 2 m 8K UHD-II HDMI 2.1 Nylon Cable
                   4320p 2160p 8K @ 60Hz 4K @ 120Hz 7680x4320p Me…
                 </h2>
 
-                <a class="flex justify-between">
-                  <span class="">$ 10.99</span>
+                <div class="flex  justify-between ">
+                  <span class="text-red-500 -mt-1 text-base">$ 10.99</span>
 
-                  <span class="">
-                    <AddToCartButton />
+                  <span class="-mt-3">
+                    <AddToCartButton size={1} />
                   </span>
-                </a>
+                </div>
               </div>
             </div>
           </div>

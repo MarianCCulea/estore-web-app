@@ -11,6 +11,7 @@ function AddToCartButton({
   price,
   // rating,
   // hasPrime,
+  size,
 }) {
   const dispatch = useDispatch();
   const addItemToCart = () => {
@@ -27,12 +28,23 @@ function AddToCartButton({
     dispatch(addToCart(product));
   };
   return (
-    <button
-      onClick={addItemToCart}
-      className="w-full mt-auto rounded-full button"
-    >
-      Add to basket
-    </button>
+    <>
+      {!size ? (
+        <button
+          onClick={addItemToCart}
+          className="w-full mt-auto rounded-full button"
+        >
+          Add to basket
+        </button>
+      ) : (
+        <button
+          onClick={addItemToCart}
+          className="p-1 text-xs border border-yellow-300 rounded-lg md:text-xs bg-gradient-to-b from-yellow-200 to-yellow-400 focus:outline-none focus:ring-2 focus:ring-yellow-500 active:from-yellow-500"
+        >
+          Add to basket
+        </button>
+      )}
+    </>
   );
 }
 
