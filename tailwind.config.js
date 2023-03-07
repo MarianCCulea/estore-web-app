@@ -9,6 +9,9 @@ module.exports = {
           light: "#232F3E",
           DEFAULT: "#131921",
         },
+        amazon_orange: {
+          DEFAULT: "#f69931",
+        },
       },
     },
     screens: {
