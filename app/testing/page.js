@@ -1,57 +1,40 @@
+"use client";
 import Header from "app/Header";
+import Image from "next/image";
+import { useState } from "react";
 
 function TestingPage() {
+  let links = [
+    "https://fakestoreapi.com/img/71z3kpMAYsL._AC_UY879_.jpg",
+    "https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg",
+    "https://fakestoreapi.com/img/51UDEzMJVpL._AC_UL640_QL65_ML3_.jpg",
+  ];
+  const [src, setSrc] = useState(links[0]);
   return (
     <div>
       <Header />
-      <section class="container px-5 py-12 mx-auto ">
-        <div className="grid grid-cols-3 gap-4">
-          <div className="col-span-1 bg-red-600">
-            {/* Left column - product image */}
+      <div className="flex pl-10 space-x-3 bg-black h-96">
+        <div className="flex flex-col space-y-3">
+          {links.map((link, i) => (
             <img
-              src="https://fakestoreapi.com/img/71z3kpMAYsL._AC_UY879_.jpg"
+              src={link}
               alt="Product Image"
-              className="w-full h-auto"
+              className="h-auto w-14"
+              onClick={() => setSrc(link)}
+              key={i}
             />
-          </div>
-          <div className="col-span-1 bg-gray-600">
-            {/* Middle column - product description */}
-            <h2 className="text-2xl font-bold">Product Name</h2>
-            <p className="mt-4">
-              Product description goes here.. description goes here. description
-              goes here. description goes here. description goes here..
-              description goes here. description goes here. description goes
-              here. description goes here.
-            </p>
-          </div>
-          <div className="col-span-1 bg-blue-600">
-            {/* Right column - product price and add to basket buttons */}
-            <div className="flex flex-col justify-between h-full">
-              <div>
-                <p className="text-2xl font-bold">$9.99</p>
-              </div>
-              <div>
-                <button className="px-4 py-2 text-white bg-red-500 rounded">
-                  Add to Basket
-                </button>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
-
-        <div className="trainCont">
-          <div className="trainItem">
-            {" "}
-            asdas das dasd asdas das dasd asdas das dasd asdas das dasd asdas
-            das dasd asdas das dasd asdas das dasd asdas das dasd asdas das dasd{" "}
-          </div>
-          <div className="trainItem">
-            asd asdas das dasd asdas das dasd asdas das dasd asdas das dasdasd
-            asd asd as
-          </div>
-          <div className="trainItem">d asd asd asd asd s</div>
+        <div className="self-center h-full">
+          <Image
+            src={src}
+            alt="Product Image"
+            height={400}
+            width={400}
+            className="object-contain w-full h-full "
+          />
         </div>
-      </section>
+      </div>
     </div>
   );
 }

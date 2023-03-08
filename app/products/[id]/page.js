@@ -39,7 +39,7 @@ function ProductPage({ params }) {
             </div>
           </div>{" "}
           <div>
-            <div className="items-start px-4 py-2 space-y-2 bg-gray-500">
+            <div className="items-start px-4 py-2 space-y-2 ">
               <div className="text-3xl">{product.title}</div>
               <div>
                 <span className="text-blue-600 ">{product.category}</span>
@@ -85,6 +85,34 @@ function ProductPage({ params }) {
                   leftContent={"Colour"}
                   rightContent={<p>White</p>}
                 />
+                <TwoColumnRow
+                  leftContent={"Colour"}
+                  rightContent={<p>White</p>}
+                />
+                <TwoColumnRow
+                  leftContent={"Special feature"}
+                  rightContent={<p>Wireless, Noise Cancellation</p>}
+                />
+                <TwoColumnRow
+                  leftContent={"Colour"}
+                  rightContent={<p>White</p>}
+                />
+              </div>
+              <div className="flex-grow pb-3 border-t border-gray-400"></div>
+              <span className="text-lg font-semibold ">About this item</span>
+              <div className="">
+                <ul className="list-disc list-inside">
+                  <li>{product.description}</li>
+                </ul>{" "}
+                <ul className="list-disc list-inside">
+                  <li>{product.description}</li>
+                </ul>{" "}
+                <ul className="list-disc list-inside">
+                  <li>{product.description}</li>
+                </ul>{" "}
+                <ul className="list-disc list-inside">
+                  <li>{product.description}</li>
+                </ul>
               </div>
             </div>
           </div>
