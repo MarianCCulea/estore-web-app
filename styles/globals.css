@@ -12,3 +12,6 @@
     }
 }
 
+.grad {
+    background-image:radial-gradient(at center top, rgb(225, 231, 236), rgb(255, 255, 255), rgb(255, 255, 255,0))
+}

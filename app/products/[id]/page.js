@@ -2,6 +2,7 @@ import Header from "app/Header";
 import React, { use } from "react";
 import Image from "next/image";
 import AddToCartButton from "app/AddToCartButton";
+import ImageDisplay from "app/ImagePicker/ImageDisplay";
 
 import { MapPinIcon } from "@heroicons/react/24/outline";
 
@@ -14,30 +15,7 @@ function ProductPage({ params }) {
       <Header />
       <section className="container px-5 py-12 mx-auto ">
         <div className="flex justify-between space-x-6">
-          <div className="grow ">
-            <div className="flex items-start h-full bg-gray-500">
-              <div className="flex flex-col flex-shrink-0 w-12 leading-none text-center bg-white">
-                <span className="pb-2 mb-2 text-gray-500 border-b-2 border-gray-200">
-                  Jul
-                </span>
-                <span className="text-lg font-medium leading-none text-gray-800 title-font">
-                  18
-                </span>
-                <span>Jul</span>
-                <span>Jul</span>
-                <span>Jul</span>
-              </div>
-              <div className="flex-grow pl-6 bg-white">
-                <Image
-                  src={product.image}
-                  alt=""
-                  height={400}
-                  width={400}
-                  className="object-contain w-full h-full "
-                />
-              </div>
-            </div>
-          </div>{" "}
+          <ImageDisplay />
           <div>
             <div className="items-start px-4 py-2 space-y-2 ">
               <div className="text-3xl">{product.title}</div>

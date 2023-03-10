@@ -13,6 +13,11 @@ module.exports = {
           DEFAULT: "#f69931",
         },
       },
+      backgroundImage: {
+        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+        "gradient-topg":
+          "bg-[linear-gradient(90deg,_#002664_33.333%,_#FCD116_33.333%_66.666%,_#CE1126_66.666%)]",
+      },
     },
     screens: {
       xs: "480px",

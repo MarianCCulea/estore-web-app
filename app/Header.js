@@ -45,20 +45,23 @@ function Header() {
           <GoToCheckoutBtn />
         </div>
       </div>
-      <div className="flex items-center p-2 pl-6 space-x-3 text-sm text-white bg-amazon_blue-light">
-        <p className="flex items-center link">
+      <div className="flex items-center p-2 pl-6 space-x-4 text-base text-white bg-amazon_blue-light">
+        <p className="flex items-center font-bold link">
           <Bars3Icon className="h-6 mr-1" />
           All
         </p>
-        <p className="link">Prime Video</p>
-        <p className="link">Amazon business</p>
-        <p className="link">TYoday deals</p>
-        <p className="hidden link lg:inline-flex">Electronices</p>
-        <p className="hidden link lg:inline-flex">Food </p>
-        <p className="hidden link lg:inline-flex">prime</p>
-        <p className="hidden link lg:inline-flex">buy again</p>
-        <p className="hidden link lg:inline-flex">Shopper toljkit</p>
-        <p className="hidden link lg:inline-flex">asdasd toljkiasdasdasdt</p>
+        <p className="link">Best Sellers</p>
+        <p className="link">Amazon Basics</p>
+        <p className="link">New Releases</p>
+        <p className="hidden link lg:inline-flex">Today&apos;s Deals</p>
+        <p className="hidden link lg:inline-flex">Customer Service </p>
+        <p className="hidden link lg:inline-flex">Music</p>
+        <p className="hidden link lg:inline-flex">PC & Video Games</p>
+        <p className="hidden link lg:inline-flex">Books</p>
+        <p className="hidden link lg:inline-flex">Kindle Books</p>
+        <p className="hidden link lg:inline-flex">Home & Kitchen</p>
+        <p className="hidden link lg:inline-flex">Fashion</p>
+        <p className="hidden link lg:inline-flex">Electronics & Photo</p>
       </div>
     </header>
   );
