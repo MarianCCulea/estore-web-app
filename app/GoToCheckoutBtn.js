@@ -7,7 +7,7 @@ import { selectCartSize } from "../Redux/cartSlice";
 function GoToCheckoutBtn() {
   const cartSize = useSelector(selectCartSize);
   return (
-    <Link href="/checkout">
+    <Link href="/basket">
       <div className="relative flex items-center link ">
         <span className="absolute top-0 right-0 w-4 h-4 font-bold text-center text-black bg-yellow-400 rounded-full md:right-10">
           {cartSize}

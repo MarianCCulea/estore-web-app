@@ -6,6 +6,7 @@ import {
 } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import GoToCheckoutBtn from "./GoToCheckoutBtn";
+import HeaderSignInBtn from "./components/HeaderSignInBtn";
 // import { useSelector } from "react-redux";
 // import { selectItems } from "@/slices/cartSlice";
 function Header() {
@@ -17,7 +18,7 @@ function Header() {
         <Link href="/">
           <div className="flex items-center flex-grow mt-2 sm:flex-grow-0">
             <Image
-              className="object-contain cursor-pointer"
+              className="object-contain px-4 cursor-pointer"
               src="https://links.papareact.com/f90"
               width={150}
               height={40}
@@ -34,10 +35,7 @@ function Header() {
           <MagnifyingGlassIcon className="h-12 p-4" />
         </div>
         <div className="flex items-center mx-6 space-x-6 text-xs text-white whitespace-nowrap">
-          <div className="link">
-            <p>Hello Name</p>
-            <p className="font-extrabold md:text-sm">Account & Lists</p>
-          </div>
+          <HeaderSignInBtn />
           <div className="link">
             <p>Retrurns</p>
             <p className="font-extrabold md:text-sm">& Orders</p>
@@ -45,7 +43,7 @@ function Header() {
           <GoToCheckoutBtn />
         </div>
       </div>
-      <div className="flex items-center p-2 pl-6 space-x-4 text-base text-white bg-amazon_blue-light">
+      <div className="flex items-center p-2 pl-6 space-x-4 text-sm text-white bg-amazon_blue-light">
         <p className="flex items-center font-bold link">
           <Bars3Icon className="h-6 mr-1" />
           All

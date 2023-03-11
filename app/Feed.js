@@ -10,7 +10,7 @@ async function Feed() {
         <Product key={product.id} {...product} />
       ))}
       <Image
-        className="md:col-span-full"
+        className=" md:col-span-full"
         src="https://links.papareact.com/dyz"
         alt=""
         width={1800}

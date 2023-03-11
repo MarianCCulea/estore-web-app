@@ -5,11 +5,12 @@ import { selectItems, selectTotal } from "../../Redux/cartSlice";
 import Header from "app/Header";
 import Image from "next/image";
 import { useSelector } from "react-redux";
+import { signIn, useSession } from "next-auth/react";
 
 function Checkout() {
   const items = useSelector(selectItems);
   const cartTotal = useSelector(selectTotal);
-  const session = false;
+  const { data: session } = useSession();
   return (
     <div className="bg-gray-200">
       <Header />
@@ -39,14 +40,12 @@ function Checkout() {
                 Subtotal ({items.length} items) :{" "}
                 <span className="font-bold">{cartTotal} $</span>
               </h2>
-              <button
-                className={`button mt-2 ${
-                  !session &&
-                  "from-gray-300 to-gray-500 border-gray-200 text-gray-300 cursor-not-allowed"
-                }`}
-              >
-                {!session ? "Sing in to checkout" : "Proceed to checkout"}
-              </button>
+
+              {session?.user ? (
+                <button href="/checkout">Go to Checkout</button>
+              ) : (
+                <button onClick={() => signIn()}>Sing in to checkout</button>
+              )}
             </>
           )}
         </div>
