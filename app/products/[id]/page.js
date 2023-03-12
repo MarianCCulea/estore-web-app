@@ -178,7 +178,7 @@ function ProductPage({ params }) {
                   <span className="-mt-1 text-base text-red-500">$ 10.99</span>
 
                   <span className="-mt-3">
-                    <AddToCartButton size={1} />
+                    <AddToCartButton size={1} {...product} />
                   </span>
                 </div>
                 <div className="flex-grow border-t border-gray-400"></div>

@@ -1,7 +1,12 @@
 import Header from "app/Header";
 import React from "react";
+import { signIn, useSession } from "next-auth/react";
+import Order from "app/Order";
 
 function Orders() {
+  let orders = use(getData(session.user));
+  const { data: session } = useSession();
+
   return (
     <div>
       <Header />
@@ -22,3 +27,17 @@ function Orders() {
 }
 
 export default Orders;
+
+async function getData(user) {
+  const res = await fetch("http://localhost:3005/orders", {
+    method: "GET",
+
+    headers: {
+      "Content-Type": "application/json",
+      authorization: `Bearer ${user.token}`,
+    },
+  });
+  const orderrs = await res.json();
+
+  return products;
+}
