@@ -15,6 +15,7 @@ function CheckoutProduct({
   price,
   rating,
   hasPrime,
+  quantity,
 }) {
   const dispatch = useDispatch();
   const removeItem = () => {
@@ -39,8 +40,8 @@ function CheckoutProduct({
             ))}
         </div>
         <p className="my-2 text-xs line-clamp-3">{description}</p>
-
-        <div>{price} $</div>
+        <div>{price} sadasd$</div>{" "}
+        <p className="text-lg text-black"> {quantity}</p>
         {hasPrime && (
           <div className="flex items-center -mt-5 space-x-2">
             <Image
@@ -52,6 +53,7 @@ function CheckoutProduct({
               height={500}
             />
             <p className="text-xs text-gray-500"> FreeNext day Delivery</p>
+            <p className="text-lg text-black"> {quantity}</p>
           </div>
         )}
       </div>

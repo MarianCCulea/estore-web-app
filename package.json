@@ -2,11 +2,18 @@
   "name": "my-project",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": ">=14.0.0",
+    "yarn": "please-use-yarn",
+    "npm": ">=8.19.2"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prettier": "prettier --write .",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@heroicons/react": "^2.0.16",
@@ -23,8 +30,12 @@
     "react-responsive-carousel": "^3.2.23"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.4.4",
+    "@commitlint/config-conventional": "^17.4.4",
     "autoprefixer": "^10.4.13",
+    "husky": "^8.0.3",
     "postcss": "^8.4.21",
+    "prettier": "^2.8.4",
     "tailwindcss": "^2.2.19"
   }
 }

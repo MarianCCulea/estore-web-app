@@ -4,11 +4,14 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
 export const sendOrder = createAsyncThunk(
   "users/getAllUsers",
-  async (thunkApi) => {
-    const response = await fetch(
-      "https://jsonplaceholder.typicode.com/users?_limit=5"
-    );
-    const data = await response.json();
+  async (order) => {
+    const res = await fetch("http://localhost:3005/login", {
+      method: "POST",
+      body: JSON.stringify(order),
+      headers: { "Content-Type": "application/json" },
+    });
+
+    const data = await res.json();
     return data;
   }
 );
@@ -24,7 +27,13 @@ const cartSlice = createSlice({
   initialState,
   reducers: {
     addToCart: (state, action) => {
-      state.items = [...state.items, action.payload];
+      const item = state.items.find((item) => item.id === action.payload.id);
+      if (item) {
+        item.quantity += 1;
+      } else {
+        action.payload.quantity = 1;
+        state.items = [...state.items, action.payload];
+      }
     },
     removeFromCart: (state, action) => {
       const index = state.items.findIndex(
@@ -51,7 +60,16 @@ export const { addToCart, removeFromCart } = cartSlice.actions;
 
 export const selectItems = (state) => state.cart.items;
 export const selectTotal = (state) =>
-  state.cart.items.reduce((total, item) => total + item.price, 0);
-export const selectCartSize = (state) => state.cart.items.length;
+  state.cart.items.reduce(
+    (total, item) => total + item.price * item.quantity,
+    0
+  );
+export const selectCartSize = (state) => {
+  var total = 0;
+  for (const element of state.cart.items) {
+    total = total + element.quantity;
+  }
+  return total;
+};
 
 export default cartSlice.reducer;
