@@ -1,13 +1,14 @@
-"use client";
-import Header from "app/Header";
-import Image from "next/image";
-import { useState } from "react";
+/* eslint-disable @next/next/no-img-element */
+'use client';
+import Header from 'app/Header';
+import Image from 'next/image';
+import { useState } from 'react';
 
 function TestingPage() {
   let links = [
-    "https://fakestoreapi.com/img/71z3kpMAYsL._AC_UY879_.jpg",
-    "https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg",
-    "https://fakestoreapi.com/img/51UDEzMJVpL._AC_UL640_QL65_ML3_.jpg",
+    'https://fakestoreapi.com/img/71z3kpMAYsL._AC_UY879_.jpg',
+    'https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg',
+    'https://fakestoreapi.com/img/51UDEzMJVpL._AC_UL640_QL65_ML3_.jpg',
   ];
   const [src, setSrc] = useState(links[0]);
   return (
@@ -15,7 +16,7 @@ function TestingPage() {
       <Header />
       <div className="flex pl-10 space-x-3 bg-black h-96">
         <div className="flex flex-col space-y-3">
-          {links.map((link, i) => (
+          {links.map((imagelink, i) => (
             <div
               key={i}
               className="grid items-start justify-center gap-8 bg-white"
@@ -23,10 +24,10 @@ function TestingPage() {
               <div className="relative group">
                 <div className="absolute -inset-0.5 bg-amazon_orange rounded-lg blur opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
                 <img
-                  src={link}
+                  src={imagelink}
                   alt="Product Image"
                   className="relative h-auto w-14"
-                  onClick={() => setSrc(link)}
+                  onClick={() => setSrc(imagelink)}
                 />
               </div>
             </div>
@@ -49,7 +50,7 @@ function TestingPage() {
             src={links[0]}
             alt="Product Image"
             className="relative h-auto w-14"
-            onClick={() => setSrc(link)}
+            // onClick={() => setSrc(link)}
           />
         </div>
       </div>
@@ -60,7 +61,7 @@ function TestingPage() {
             src={links[0]}
             alt="Product Image"
             className="relative h-auto w-14"
-            onClick={() => setSrc(link)}
+            //onClick={() => setSrc(link)}
           />
         </div>
       </div>

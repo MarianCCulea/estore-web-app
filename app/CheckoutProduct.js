@@ -1,16 +1,14 @@
-"use client";
+'use client';
 
-import Image from "next/image";
-import React from "react";
-import { StarIcon } from "@heroicons/react/24/solid";
-import { removeFromCart } from "../Redux/cartSlice";
-import { useDispatch } from "react-redux";
+import { StarIcon } from '@heroicons/react/24/solid';
+import Image from 'next/image';
+import { useDispatch } from 'react-redux';
+import { removeFromCart } from '../Redux/cartSlice';
 
 function CheckoutProduct({
   id,
   title,
   description,
-  category,
   image,
   price,
   rating,
@@ -40,7 +38,7 @@ function CheckoutProduct({
             ))}
         </div>
         <p className="my-2 text-xs line-clamp-3">{description}</p>
-        <div>{price} sadasd$</div>{" "}
+        <div>{price} sadasd$</div>{' '}
         <p className="text-lg text-black"> {quantity}</p>
         {hasPrime && (
           <div className="flex items-center -mt-5 space-x-2">

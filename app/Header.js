@@ -1,12 +1,8 @@
-import Image from "next/image";
-import {
-  MagnifyingGlassIcon,
-  ShoppingCartIcon,
-  Bars3Icon,
-} from "@heroicons/react/24/outline";
-import Link from "next/link";
-import GoToCheckoutBtn from "./GoToCheckoutBtn";
-import HeaderSignInBtn from "./components/HeaderSignInBtn";
+import { Bars3Icon, MagnifyingGlassIcon } from '@heroicons/react/24/outline';
+import Image from 'next/image';
+import Link from 'next/link';
+import HeaderSignInBtn from './components/HeaderSignInBtn';
+import GoToCheckoutBtn from './GoToCheckoutBtn';
 // import { useSelector } from "react-redux";
 // import { selectItems } from "@/slices/cartSlice";
 function Header() {

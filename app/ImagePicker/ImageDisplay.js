@@ -1,13 +1,13 @@
-"use client";
-import React from "react";
-import { useState } from "react";
-import Image from "next/image";
+/* eslint-disable @next/next/no-img-element */
+'use client';
+import Image from 'next/image';
+import { useState } from 'react';
 
 function ImageDisplay() {
   let links = [
-    "https://fakestoreapi.com/img/71z3kpMAYsL._AC_UY879_.jpg",
-    "https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg",
-    "https://fakestoreapi.com/img/51UDEzMJVpL._AC_UL640_QL65_ML3_.jpg",
+    'https://fakestoreapi.com/img/71z3kpMAYsL._AC_UY879_.jpg',
+    'https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg',
+    'https://fakestoreapi.com/img/51UDEzMJVpL._AC_UL640_QL65_ML3_.jpg',
   ];
   const [src, setSrc] = useState(links[0]);
   return (

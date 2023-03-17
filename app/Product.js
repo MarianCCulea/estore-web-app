@@ -1,10 +1,7 @@
-import Image from "next/image";
-import { StarIcon } from "@heroicons/react/24/solid";
-import AddToCartButton from "./AddToCartButton";
-import Link from "next/link";
-
-const MAX_RATING = 5;
-const MIN_RATING = 1;
+import { StarIcon } from '@heroicons/react/24/solid';
+import Image from 'next/image';
+import Link from 'next/link';
+import AddToCartButton from './AddToCartButton';
 
 function Product({ id, title, description, category, image, price }) {
   // const [rating] = useState(

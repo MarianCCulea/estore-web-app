@@ -1,4 +1,4 @@
-import React, { use } from "react";
+import { use } from 'react';
 
 async function OrderPage({ params }) {
   let order = use(getOrder(params.id));
@@ -10,7 +10,7 @@ async function OrderPage({ params }) {
 }
 
 async function getOrder(id) {
-  let order = await fetch("");
+  let order = await fetch('', id);
 
   return order.json();
 }

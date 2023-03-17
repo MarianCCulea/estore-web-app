@@ -1,20 +1,19 @@
-"use client";
-import React, { useRef } from "react";
-import Image from "next/image";
-import { signIn } from "next-auth/react";
-import Link from "next/link";
+'use client';
+import Image from 'next/image';
+import Link from 'next/link';
+import { useRef } from 'react';
 
 function Login() {
-  const email = useRef("");
-  const pass = useRef("");
+  const email = useRef('');
+  const pass = useRef('');
 
   const onSubmit = async () => {
-    const result = await signIn("credentials", {
-      username: email.current,
-      password: pass.current,
-      redirect: true,
-      callbackUrl: "/",
-    });
+    // const result = await signIn('credentials', {
+    //   username: email.current,
+    //   password: pass.current,
+    //   redirect: true,
+    //   callbackUrl: '/',
+    // });
   };
   return (
     <div className="">
@@ -68,7 +67,7 @@ function Login() {
           <div className="inline-flex items-center justify-center w-full">
             <hr className="w-full h-0.5 my-8 bg-gray-300 border-0 rounded dark:bg-gray-700" />
             <div className="absolute px-4 text-sm text-gray-500 -translate-x-1/2 bg-white left-1/2 dark:bg-gray-900">
-              New to Amazon?{" "}
+              New to Amazon?{' '}
             </div>
           </div>
           <Link href="/auth/register" className="w-full">
@@ -80,7 +79,7 @@ function Login() {
         </div>
       </main>
       <div className=" h-80 grad">
-        {" "}
+        {' '}
         <div className="flex flex-col items-center border-t-2 border-gray-200 ">
           <div className="flex py-4 space-x-6 text-xs text-blue-600">
             <span className="link">Conditions of Use</span>

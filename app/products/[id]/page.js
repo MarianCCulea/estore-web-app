@@ -1,12 +1,11 @@
-import Header from "app/Header";
-import React, { use } from "react";
-import Image from "next/image";
-import AddToCartButton from "app/AddToCartButton";
-import ImageDisplay from "app/ImagePicker/ImageDisplay";
+import AddToCartButton from 'app/AddToCartButton';
+import Header from 'app/Header';
+import ImageDisplay from 'app/ImagePicker/ImageDisplay';
+import { use } from 'react';
 
-import { MapPinIcon } from "@heroicons/react/24/outline";
+import { MapPinIcon } from '@heroicons/react/24/outline';
 
-import { StarIcon } from "@heroicons/react/24/solid";
+import { StarIcon } from '@heroicons/react/24/solid';
 
 function ProductPage({ params }) {
   let product = use(getData(params.id));
@@ -36,7 +35,7 @@ function ProductPage({ params }) {
               <div className="border-t border-white "></div>
               <div className="inline-flex items-center text-base">
                 <div className="px-2 text-white bg-amazon_blue">
-                  {" "}
+                  {' '}
                   Amazon`s <span className=" text-amazon_orange">Choice</span>
                 </div>
               </div>
@@ -52,27 +51,27 @@ function ProductPage({ params }) {
               </div>
               <div className="w-72">
                 <TwoColumnRow
-                  leftContent={"Brand"}
+                  leftContent={'Brand'}
                   rightContent={<p>Soundcore</p>}
                 />
                 <TwoColumnRow
-                  leftContent={"Model name"}
+                  leftContent={'Model name'}
                   rightContent={<p>Bluetooth 5.2</p>}
                 />
                 <TwoColumnRow
-                  leftContent={"Colour"}
+                  leftContent={'Colour'}
                   rightContent={<p>White</p>}
                 />
                 <TwoColumnRow
-                  leftContent={"Colour"}
+                  leftContent={'Colour'}
                   rightContent={<p>White</p>}
                 />
                 <TwoColumnRow
-                  leftContent={"Special feature"}
+                  leftContent={'Special feature'}
                   rightContent={<p>Wireless, Noise Cancellation</p>}
                 />
                 <TwoColumnRow
-                  leftContent={"Colour"}
+                  leftContent={'Colour'}
                   rightContent={<p>White</p>}
                 />
               </div>
@@ -81,13 +80,13 @@ function ProductPage({ params }) {
               <div className="">
                 <ul className="list-disc list-inside">
                   <li>{product.description}</li>
-                </ul>{" "}
+                </ul>{' '}
                 <ul className="list-disc list-inside">
                   <li>{product.description}</li>
-                </ul>{" "}
+                </ul>{' '}
                 <ul className="list-disc list-inside">
                   <li>{product.description}</li>
-                </ul>{" "}
+                </ul>{' '}
                 <ul className="list-disc list-inside">
                   <li>{product.description}</li>
                 </ul>

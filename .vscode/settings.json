@@ -1,10 +1,51 @@
 {
     "workbench.colorCustomizations": {
-        "statusBar.background": "#f08804",
-        "statusBar.foreground": "#15202b",
-        "statusBarItem.hoverBackground": "#be6c03",
-        "statusBarItem.remoteBackground": "#f08804",
-        "statusBarItem.remoteForeground": "#15202b"
+      "statusBar.background": "#f08804",
+      "statusBar.foreground": "#15202b",
+      "statusBarItem.hoverBackground": "#be6c03",
+      "statusBarItem.remoteBackground": "#f08804",
+      "statusBarItem.remoteForeground": "#15202b"
     },
-    "peacock.color": "#f08804"
-}
+    "peacock.color": "#f08804",
+    
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll": true,
+      "source.organizeImports": true
+    },
+    "cSpell.words": [
+      "codenames",
+      "colour",
+      "commitlint",
+      "datacentres",
+      "devs",
+      "Eagleson",
+      "esbenp",
+      "Etyo",
+      "Kasper",
+      "leerob",
+      "nextauth",
+      "nextjs",
+      "npmrc",
+      "pravatar",
+      "preload",
+      "prettierignore",
+      "prettierrc",
+      "regexes",
+      "rgba",
+      "scaleable",
+      "signin",
+      "Supabase",
+      "superpowered",
+      "tailwindcss",
+      "typeof",
+      "typesafe",
+      "unoptimized",
+      "userinfo",
+      "Vercel",
+      "Viewports",
+      "WEBP"
+    ]
+} 
+    
