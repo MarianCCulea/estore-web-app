@@ -1,3 +1,4 @@
+'use client';
 import Header from 'app/Header';
 import Order from 'app/Order';
 import { useSession } from 'next-auth/react';
