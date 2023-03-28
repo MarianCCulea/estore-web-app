@@ -1,11 +1,10 @@
 'use client';
 import Header from 'app/Header';
-import Order from 'app/Order';
-import { useSession } from 'next-auth/react';
+//import { useSession } from 'next-auth/react';
 
 function Orders() {
-  let orders = getData(session.user);
-  const { data: session } = useSession();
+  // let orders = getData(session.user);
+  // const { data: session } = useSession();
 
   return (
     <div>
@@ -14,13 +13,13 @@ function Orders() {
         <h1 className="pb-1 mb-2 text-3xl border-b border-yellow-400">
           Your Orders
         </h1>
-        {session ? <h2>X Orders</h2> : <h2>Please Sign in</h2>}
+        {/* {session ? <h2>X Orders</h2> : <h2>Please Sign in</h2>}
 
         <div className="mt-5 space-y-4 ">
           {orders?.map((order, i) => (
             <Order key={i} />
           ))}
-        </div>
+        </div> */}
       </main>
     </div>
   );
@@ -28,16 +27,16 @@ function Orders() {
 
 export default Orders;
 
-async function getData(user) {
-  const res = await fetch('http://localhost:3005/orders', {
-    method: 'GET',
+// async function getData(user) {
+//   const res = await fetch('http://localhost:3005/orders', {
+//     method: 'GET',
 
-    headers: {
-      'Content-Type': 'application/json',
-      authorization: `Bearer ${user.token}`,
-    },
-  });
-  const orderrs = await res.json();
+//     headers: {
+//       'Content-Type': 'application/json',
+//       authorization: `Bearer ${user.token}`,
+//     },
+//   });
+//   const orderrs = await res.json();
 
-  return orderrs;
-}
+//   return orderrs;
+// }
