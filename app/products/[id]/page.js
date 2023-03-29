@@ -1,5 +1,5 @@
 import AddToCartButton from 'app/AddToCartButton';
-import Header from 'app/Header';
+
 import ImageDisplay from 'app/ImagePicker/ImageDisplay';
 import { use } from 'react';
 
@@ -10,8 +10,7 @@ import { StarIcon } from '@heroicons/react/24/solid';
 function ProductPage({ params }) {
   let product = use(getData(params.id));
   return (
-    <div>
-      <Header />
+    <div className="bg-white">
       <section className="container px-5 py-12 mx-auto ">
         <div className="flex justify-between space-x-6">
           <ImageDisplay />

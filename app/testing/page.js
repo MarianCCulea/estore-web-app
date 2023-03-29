@@ -1,6 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
 'use client';
-import Header from 'app/Header';
 import Image from 'next/image';
 import { useState } from 'react';
 
@@ -13,7 +12,6 @@ function TestingPage() {
   const [src, setSrc] = useState(links[0]);
   return (
     <div>
-      <Header />
       <div className="flex pl-10 space-x-3 bg-black h-96">
         <div className="flex flex-col space-y-3">
           {links.map((imagelink, i) => (

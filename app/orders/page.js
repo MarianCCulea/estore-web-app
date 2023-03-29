@@ -1,5 +1,4 @@
 'use client';
-import Header from 'app/Header';
 //import { useSession } from 'next-auth/react';
 
 function Orders() {
@@ -8,7 +7,6 @@ function Orders() {
 
   return (
     <div>
-      <Header />
       <main className="max-w-screen-lg p-10 mx-auto">
         <h1 className="pb-1 mb-2 text-3xl border-b border-yellow-400">
           Your Orders

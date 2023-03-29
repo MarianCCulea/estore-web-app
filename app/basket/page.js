@@ -1,11 +1,10 @@
-"use client";
+'use client';
 
-import CheckoutProduct from "app/CheckoutProduct";
-import { selectItems, selectTotal } from "../../Redux/cartSlice";
-import Header from "app/Header";
-import Image from "next/image";
-import { useSelector } from "react-redux";
-import { signIn, useSession } from "next-auth/react";
+import CheckoutProduct from 'app/CheckoutProduct';
+import { signIn, useSession } from 'next-auth/react';
+import Image from 'next/image';
+import { useSelector } from 'react-redux';
+import { selectItems, selectTotal } from '../../Redux/cartSlice';
 
 function Checkout() {
   const items = useSelector(selectItems);
@@ -13,7 +12,6 @@ function Checkout() {
   const { data: session } = useSession();
   return (
     <div className="bg-gray-200">
-      <Header />
       <main className="max-w-screen-xl mx-auto lg:flex">
         <div className="flex-grow m-5 shadow-sm">
           <Image
@@ -26,7 +24,7 @@ function Checkout() {
 
           <div className="flex flex-col p-5 space-y-10 bg-white">
             <h1 className="pb-4 text-3xl border-b ">
-              {items.length === 0 ? "Your basket is empty" : "Shopping Basket"}
+              {items.length === 0 ? 'Your basket is empty' : 'Shopping Basket'}
             </h1>
             {items.map((item, i) => (
               <CheckoutProduct key={i} {...item} />
@@ -37,7 +35,7 @@ function Checkout() {
           {items.length > 0 && (
             <>
               <h2 className="whitespace-nowrap">
-                Subtotal ({items.length} items) :{" "}
+                Subtotal ({items.length} items) :{' '}
                 <span className="font-bold">{cartTotal} $</span>
               </h2>
 
