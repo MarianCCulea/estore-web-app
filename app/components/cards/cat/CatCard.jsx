@@ -3,7 +3,7 @@ import styles from './CatCard.module.css';
 
 const CatCard = ({ tag, title, body, author, time }) => {
   return (
-    <div className={styles.container}>
+    <div className={` ${styles.container}`}>
       <div className={styles.card}>
         <div className={styles.card__header}>
           <Image

@@ -9,6 +9,7 @@ const BREAKPOINTS_INT = {
   md: 900,
   lg: 1200,
   xl: 1536,
+  xxl: 1700,
 };
 
 const customViewports = Object.fromEntries(

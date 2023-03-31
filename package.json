@@ -39,6 +39,7 @@
     "@storybook/addon-essentials": "^6.5.16",
     "@storybook/addon-interactions": "^6.5.16",
     "@storybook/addon-links": "^6.5.16",
+    "@storybook/addon-postcss": "^2.0.0",
     "@storybook/builder-webpack5": "^6.5.16",
     "@storybook/manager-webpack5": "^6.5.16",
     "@storybook/react": "^6.5.16",
@@ -50,6 +51,7 @@
     "husky": "^8.0.3",
     "postcss": "^8.4.21",
     "prettier": "^2.8.4",
+    "storybook-css-modules-preset": "^1.1.1",
     "tailwindcss": "^2.2.19"
   },
   "resolutions": {

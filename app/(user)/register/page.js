@@ -1,6 +1,5 @@
-import React from "react";
-import Image from "next/image";
-import Link from "next/link";
+import Image from 'next/image';
+import Link from 'next/link';
 
 function Login() {
   return (
@@ -72,7 +71,7 @@ function Login() {
               <div className="flex-grow border-t border-gray-400"></div>
               <div>
                 <span className="text-sm">Already have an account? </span>
-                <a href="/auth/login" className="text-sm text-blue-600 link">
+                <a href="/login" className="text-sm text-blue-600 link">
                   Sign in &gt;
                 </a>
               </div>
@@ -81,7 +80,7 @@ function Login() {
         </div>
       </main>
       <div className=" h-80 grad">
-        {" "}
+        {' '}
         <div className="flex flex-col items-center border-t-2 border-gray-200 ">
           <div className="flex py-4 space-x-6 text-xs text-blue-600">
             <span className="link">Conditions of Use</span>

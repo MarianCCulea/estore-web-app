@@ -70,7 +70,7 @@ function Login() {
               New to Amazon?{' '}
             </div>
           </div>
-          <Link href="/auth/register" className="w-full">
+          <Link href="/register" className="w-full">
             <button className="w-full p-2 text-xs border border-gray-300 rounded-sm md:text-sm bg-gradient-to-b from-gray-200 to-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-500 active:from-gray-500">
               Create your Amazon account
             </button>

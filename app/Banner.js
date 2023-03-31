@@ -1,5 +1,5 @@
-import Image from "next/image";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
+import Image from 'next/image';
+// import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 function Banner() {
   return (

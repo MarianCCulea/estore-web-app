@@ -1,9 +1,9 @@
 import { Bars3Icon } from '@heroicons/react/24/outline';
-import Search from 'components/utility/search/Search';
 import Image from 'next/image';
 import Link from 'next/link';
-import GoToCheckoutBtn from './GoToCheckoutBtn';
-import HeaderSignInBtn from './components/HeaderSignInBtn';
+import CheckOutBtn from '../../buttons/CheckOutBtn/CheckOutBtn';
+import HeaderSignInBtn from '../../buttons/HeaderSignIn/HeaderSignInBtn';
+import Search from '../../utility/search/Search';
 // import { useSelector } from "react-redux";
 // import { selectItems } from "@/slices/cartSlice";
 function Header() {
@@ -32,7 +32,7 @@ function Header() {
             <p>Retrurns</p>
             <p className="font-extrabold md:text-sm">& Orders</p>
           </div>
-          <GoToCheckoutBtn />
+          <CheckOutBtn />
         </div>
       </div>
       <div className="flex items-center p-2 pl-6 space-x-4 text-sm text-white bg-amazon_blue-light">

@@ -1,10 +1,10 @@
-"use client";
-import { ShoppingCartIcon } from "@heroicons/react/24/outline";
-import Link from "next/link";
-import { useSelector } from "react-redux";
-import { selectCartSize } from "../Redux/cartSlice";
+'use client';
+import { ShoppingCartIcon } from '@heroicons/react/24/outline';
+import Link from 'next/link';
+import { useSelector } from 'react-redux';
+import { selectCartSize } from '../../../../Redux/cartSlice';
 
-function GoToCheckoutBtn() {
+function CheckOutBtn() {
   const cartSize = useSelector(selectCartSize);
   return (
     <Link href="/basket">
@@ -21,4 +21,4 @@ function GoToCheckoutBtn() {
   );
 }
 
-export default GoToCheckoutBtn;
+export default CheckOutBtn;

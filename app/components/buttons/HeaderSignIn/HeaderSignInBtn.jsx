@@ -1,6 +1,5 @@
-"use client";
-import React from "react";
-import { signIn, signOut, useSession } from "next-auth/react";
+'use client';
+import { signIn, signOut, useSession } from 'next-auth/react';
 
 function HeaderSignInBtn() {
   const { data: session } = useSession();
