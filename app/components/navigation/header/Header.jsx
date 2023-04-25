@@ -28,10 +28,10 @@ function Header() {
 
         <div className="flex items-center mx-6 space-x-6 text-xs text-white whitespace-nowrap">
           <HeaderSignInBtn />
-          <div className="link">
+          <Link href="/orders" className="link">
             <p>Retrurns</p>
             <p className="font-extrabold md:text-sm">& Orders</p>
-          </div>
+          </Link>
           <CheckOutBtn />
         </div>
       </div>

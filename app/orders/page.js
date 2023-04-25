@@ -1,9 +1,31 @@
 'use client';
-//import { useSession } from 'next-auth/react';
+import Order from 'app/components/order/Order';
+import { useSession } from 'next-auth/react';
+import { useEffect, useState } from 'react';
 
-function Orders() {
-  // let orders = getData(session.user);
-  // const { data: session } = useSession();
+export default function Orders() {
+  const { data: session } = useSession();
+  const [data, setData] = useState(null);
+  const [isLoading, setLoading] = useState(false);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch('http://localhost:3005/orders', {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        authorization: `Bearer ${session.user.token}`,
+      },
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        setData(data);
+        setLoading(false);
+      });
+  }, []);
+
+  if (isLoading) return <p>Loading...</p>;
+  if (!data) return <p>No profile data</p>;
 
   return (
     <div>
@@ -11,30 +33,13 @@ function Orders() {
         <h1 className="pb-1 mb-2 text-3xl border-b border-yellow-400">
           Your Orders
         </h1>
-        {/* {session ? <h2>X Orders</h2> : <h2>Please Sign in</h2>}
-
+        {session ? <h2>{data.length} Orders</h2> : <h2>Please Sign in</h2>}
         <div className="mt-5 space-y-4 ">
-          {orders?.map((order, i) => (
-            <Order key={i} />
+          {data?.map((order, i) => (
+            <Order {...order} key={i} />
           ))}
-        </div> */}
+        </div>
       </main>
     </div>
   );
 }
-
-export default Orders;
-
-// async function getData(user) {
-//   const res = await fetch('http://localhost:3005/orders', {
-//     method: 'GET',
-
-//     headers: {
-//       'Content-Type': 'application/json',
-//       authorization: `Bearer ${user.token}`,
-//     },
-//   });
-//   const orderrs = await res.json();
-
-//   return orderrs;
-// }

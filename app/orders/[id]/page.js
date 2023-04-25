@@ -1,10 +1,6 @@
 async function OrderPage() {
   //let order = use(getOrder(params.id));
-  return (
-    <div>
-      <h2>Orders</h2>
-    </div>
-  );
+  return <div className="relative border rounded-md"></div>;
 }
 
 // async function getOrder(id) {

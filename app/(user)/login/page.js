@@ -1,4 +1,5 @@
 'use client';
+import { signIn } from 'next-auth/react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRef } from 'react';
@@ -8,12 +9,12 @@ function Login() {
   const pass = useRef('');
 
   const onSubmit = async () => {
-    // const result = await signIn('credentials', {
-    //   username: email.current,
-    //   password: pass.current,
-    //   redirect: true,
-    //   callbackUrl: '/',
-    // });
+    const result = await signIn('credentials', {
+      username: email.current,
+      password: pass.current,
+      redirect: true,
+      callbackUrl: '/',
+    });
   };
   return (
     <div className="">

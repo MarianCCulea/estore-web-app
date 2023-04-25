@@ -2,8 +2,8 @@ import { Bars3Icon } from '@heroicons/react/24/outline';
 import Search from 'components/utility/search/Search';
 import Image from 'next/image';
 import Link from 'next/link';
-import GoToCheckoutBtn from './GoToCheckoutBtn';
-import HeaderSignInBtn from './components/HeaderSignInBtn';
+import GoToCheckoutBtn from './components/buttons/CheckOutBtn/CheckOutBtn';
+import HeaderSignInBtn from './components/buttons/HeaderSignIn/HeaderSignInBtn';
 // import { useSelector } from "react-redux";
 // import { selectItems } from "@/slices/cartSlice";
 function Header() {
@@ -28,10 +28,10 @@ function Header() {
 
         <div className="flex items-center mx-6 space-x-6 text-xs text-white whitespace-nowrap">
           <HeaderSignInBtn />
-          <div className="link">
+          <Link href="/orders" className="link">
             <p>Retrurns</p>
             <p className="font-extrabold md:text-sm">& Orders</p>
-          </div>
+          </Link>
           <GoToCheckoutBtn />
         </div>
       </div>
