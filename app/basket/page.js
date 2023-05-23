@@ -3,6 +3,7 @@
 import CheckoutProduct from 'app/CheckoutProduct';
 import { signIn, useSession } from 'next-auth/react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useSelector } from 'react-redux';
 import { selectItems, selectTotal } from '../../Redux/cartSlice';
 
@@ -40,7 +41,7 @@ function Checkout() {
               </h2>
 
               {session?.user ? (
-                <button href="/checkout">Go to Checkout</button>
+                <Link href="/checkout">Go to Checkout</Link>
               ) : (
                 <button onClick={() => signIn()}>Sing in to checkout</button>
               )}

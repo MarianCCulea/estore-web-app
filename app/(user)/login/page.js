@@ -9,7 +9,7 @@ function Login() {
   const pass = useRef('');
 
   const onSubmit = async () => {
-    const result = await signIn('credentials', {
+     await signIn('credentials', {
       username: email.current,
       password: pass.current,
       redirect: true,

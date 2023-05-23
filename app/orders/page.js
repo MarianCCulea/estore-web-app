@@ -1,28 +1,21 @@
 'use client';
 import Order from 'app/components/order/Order';
 import { useSession } from 'next-auth/react';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchOrders, selectOrders } from 'Redux/ordersSlice';
 
 export default function Orders() {
   const { data: session } = useSession();
-  const [data, setData] = useState(null);
-  const [isLoading, setLoading] = useState(false);
+  const dispatch = useDispatch();
+  const data = useSelector(selectOrders);
+  const isLoading = useSelector((state) => state.orders.isLoading);
 
   useEffect(() => {
-    setLoading(true);
-    fetch('http://localhost:3005/orders', {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json',
-        authorization: `Bearer ${session.user.token}`,
-      },
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        setData(data);
-        setLoading(false);
-      });
-  }, []);
+    if (session) {
+      dispatch(fetchOrders(session.user.token));
+    }
+  }, [dispatch, session]);
 
   if (isLoading) return <p>Loading...</p>;
   if (!data) return <p>No profile data</p>;
