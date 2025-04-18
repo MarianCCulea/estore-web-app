@@ -1,5 +1,5 @@
-import Banner from '../components/atoms/Banner';
-import Header from '../components/organisms/navigation/header/Header';
+import Banner from './components/atoms/Banner';
+import Header from './components/organisms/navigation/header/Header';
 import Feed from './Feed';
 
 export default function Page() {
