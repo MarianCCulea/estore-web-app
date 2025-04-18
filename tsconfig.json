@@ -1,0 +1,68 @@
+{
+  "compilerOptions": {
+    "target": "ES2018",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "baseUrl": ".",
+    "paths": {
+      "atoms": [
+        "src/components/atoms"
+      ],
+      "icons": [
+        "src/components/icons"
+      ],
+      "molecules": [
+        "src/components/molecules"
+      ],
+      "modals": [
+        "src/components/modals"
+      ],
+      "modalsContents": [
+        "src/components/modalsContents"
+      ],
+      "organisms": [
+        "src/components/organisms"
+      ],
+      "utils": [
+        "src/utils"
+      ]
+    },
+    "allowSyntheticDefaultImports": true,
+    "incremental": true,
+    "strictNullChecks": true,
+    "noImplicitAny": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
+  },
+  "include": [
+    "next-env.d.ts",
+    "additional.d.ts",
+    ".eslintrc.js",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "src/components/lexical",
+    "templates",
+    "src/components/**/*.stories.tsx"
+  ]
+}

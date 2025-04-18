@@ -3,7 +3,7 @@
 import { StarIcon } from '@heroicons/react/24/solid';
 import Image from 'next/image';
 import { useDispatch } from 'react-redux';
-import { removeFromCart } from '../Redux/cartSlice';
+import { removeFromCart } from '../../store/cartSlice';
 
 function CheckoutProduct({
   id,

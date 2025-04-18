@@ -2,7 +2,7 @@
 import { ShoppingCartIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
 import { useSelector } from 'react-redux';
-import { selectCartSize } from '../../../../Redux/cartSlice';
+import { selectCartSize } from '../../../../store/cartSlice';
 
 function CheckOutBtn() {
   const cartSize = useSelector(selectCartSize);

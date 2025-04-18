@@ -1,9 +1,9 @@
 import { Bars3Icon } from '@heroicons/react/24/outline';
 import Image from 'next/image';
 import Link from 'next/link';
+import Search from '../../../molecules/search/Search';
 import CheckOutBtn from '../../buttons/CheckOutBtn/CheckOutBtn';
 import HeaderSignInBtn from '../../buttons/HeaderSignIn/HeaderSignInBtn';
-import Search from '../../molecules/search/Search';
 // import { useSelector } from "react-redux";
 // import { selectItems } from "@/slices/cartSlice";
 function Header() {

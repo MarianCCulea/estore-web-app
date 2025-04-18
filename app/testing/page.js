@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 'use client';
-import Dropdown from 'app/components/dropdown/Dropdown';
+import Dropdown from 'app/components/molecules/dropdown/Dropdown';
 import { useState } from 'react';
 
 function TestingPage() {

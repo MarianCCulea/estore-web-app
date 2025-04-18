@@ -1,9 +1,9 @@
 'use client';
-import Order from 'app/components/order/Order';
+import Order from 'app/components/molecules/order/Order';
+import { fetchOrders, selectOrders } from 'app/store/ordersSlice';
 import { useSession } from 'next-auth/react';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchOrders, selectOrders } from 'Redux/ordersSlice';
 
 export default function Orders() {
   const { data: session } = useSession();

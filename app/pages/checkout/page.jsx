@@ -1,7 +1,7 @@
 'use client';
-import Dropdown from 'app/components/dropdown/Dropdown';
+import Dropdown from 'app/components/molecules/dropdown/Dropdown';
 import { useSelector } from 'react-redux';
-import { selectItems } from '../../Redux/cartSlice';
+import { selectItems } from '../../store/cartSlice';
 
 import tw from 'tailwind-styled-components';
 
