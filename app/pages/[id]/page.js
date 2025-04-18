@@ -1,7 +1,7 @@
-import AddToCartButton from 'app/AddToCartButton';
+import AddToCartButton from 'app/components/atoms/AddToCartButton';
 
-import Header from 'app/components/navigation/header/Header';
-import ImageDisplay from 'app/ImagePicker/ImageDisplay';
+import ImageDisplay from 'app/components/atoms/ImageDisplay';
+import Header from 'app/components/organisms/navigation/header/Header';
 import { use } from 'react';
 
 import { MapPinIcon } from '@heroicons/react/24/outline';

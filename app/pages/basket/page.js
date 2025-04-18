@@ -1,11 +1,11 @@
 'use client';
 
-import CheckoutProduct from 'app/CheckoutProduct';
+import CheckoutProduct from 'app/components/molecules/CheckoutProduct';
 import { signIn, useSession } from 'next-auth/react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useSelector } from 'react-redux';
-import { selectItems, selectTotal } from '../../Redux/cartSlice';
+import { selectItems, selectTotal } from '../../store/cartSlice';
 
 function Checkout() {
   const items = useSelector(selectItems);
