@@ -1,6 +1,6 @@
 import Banner from './components/atoms/Banner';
+import Feed from './components/organisms/Feed';
 import Header from './components/organisms/navigation/header/Header';
-import Feed from './Feed';
 
 export default function Page() {
   return (

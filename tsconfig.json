@@ -20,26 +20,17 @@
     "baseUrl": ".",
     "paths": {
       "atoms": [
-        "src/components/atoms"
+        "app/components/atoms"
       ],
       "icons": [
-        "src/components/icons"
+        "app/components/icons"
       ],
       "molecules": [
-        "src/components/molecules"
-      ],
-      "modals": [
-        "src/components/modals"
-      ],
-      "modalsContents": [
-        "src/components/modalsContents"
+        "app/components/molecules"
       ],
       "organisms": [
-        "src/components/organisms"
+        "app/components/organisms"
       ],
-      "utils": [
-        "src/utils"
-      ]
     },
     "allowSyntheticDefaultImports": true,
     "incremental": true,
@@ -58,11 +49,11 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts"
-  ],
+, "app/hooks/useCartTotal.js"  ],
   "exclude": [
     "node_modules",
-    "src/components/lexical",
+    "app/components/lexical",
     "templates",
-    "src/components/**/*.stories.tsx"
+    "app/components/**/*.stories.tsx"
   ]
 }

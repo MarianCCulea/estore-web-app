@@ -1,6 +1,6 @@
 "use client";
 
-import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
 export const sendOrder = createAsyncThunk(
   "users/getAllUsers",
@@ -16,7 +16,17 @@ export const sendOrder = createAsyncThunk(
   }
 );
 
-const initialState = {
+interface CartItem {
+  id: string;
+  quantity: number;
+  price: number; 
+}
+
+const initialState: {
+  items: CartItem[];
+  status: "idle" | "loading" | "succeeded" | "failed";
+  error: string | null;
+} = {
   items: [],
   status: "idle", //'idle' | 'loading' | 'succeeded' | 'failed'
   error: null,
@@ -49,7 +59,7 @@ const cartSlice = createSlice({
 
   extraReducers: (builder) => {
     builder.addCase(sendOrder.fulfilled, (state, action) => {
-      state.loading = false;
+      state.status = "succeeded";
     });
 
     builder.addCase(sendOrder.pending, (state, action) => {});
@@ -58,14 +68,21 @@ const cartSlice = createSlice({
 
 export const { addToCart, removeFromCart } = cartSlice.actions;
 
-export const selectItems = (state) => state.cart.items;
-export const selectTotal = (state) =>
+export const selectItems = (state: { cart: { items: CartItem[] } }): CartItem[] => state.cart.items;
+export const selectTotal = (state: { cart: { items: CartItem[] } }): number =>
   state.cart.items.reduce(
-    (total, item) => total + item.price * item.quantity,
+    (total: number, item: CartItem) => total + item.price * item.quantity,
     0
   );
-export const selectCartSize = (state) => {
-  var total = 0;
+  
+interface RootState {
+  cart: {
+    items: CartItem[];
+  };
+}
+
+export const selectCartSize = (state: RootState): number => {
+  let total = 0;
   for (const element of state.cart.items) {
     total = total + element.quantity;
   }

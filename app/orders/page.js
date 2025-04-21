@@ -1,6 +1,6 @@
 'use client';
-import Order from 'app/components/molecules/order/Order';
-import { fetchOrders, selectOrders } from 'app/store/ordersSlice';
+import Order from '@/components/molecules/order/Order';
+import { fetchOrders, selectOrders } from '@/store/ordersSlice';
 import { useSession } from 'next-auth/react';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
