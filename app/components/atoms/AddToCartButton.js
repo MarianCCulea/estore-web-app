@@ -1,6 +1,6 @@
 "use client";
 import { useDispatch } from "react-redux";
-import { addToCart } from "../Redux/cartSlice";
+import { addToCart } from "../../store/cartSlice";
 
 function AddToCartButton({
   id,

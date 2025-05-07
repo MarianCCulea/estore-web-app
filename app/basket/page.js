@@ -1,15 +1,20 @@
 'use client';
 
-import CheckoutProduct from 'app/CheckoutProduct';
 import { signIn, useSession } from 'next-auth/react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useSelector } from 'react-redux';
-import { selectItems, selectTotal } from '../../Redux/cartSlice';
+import CheckoutProduct from '../components/molecules/CheckoutProduct';
+import { useCartTotal } from '../hooks/useCartTotal';
+import { selectItems, selectTotal, } from '../store/cartSlice';
+
 
 function Checkout() {
   const items = useSelector(selectItems);
   const cartTotal = useSelector(selectTotal);
+
+  const { subtotal, itemCount, total } = useCartTotal();
+
   const { data: session } = useSession();
   return (
     <div className="bg-gray-200">
@@ -36,8 +41,16 @@ function Checkout() {
           {items.length > 0 && (
             <>
               <h2 className="whitespace-nowrap">
-                Subtotal ({items.length} items) :{' '}
+                Subtotal from cartSlice ({items.length} items) :{' '}
                 <span className="font-bold">{cartTotal} $</span>
+              </h2>
+              <h2 className="whitespace-nowrap">
+                Subtotal - hook ({itemCount} items) :{' '}
+                <span className="font-bold">{subtotal} $</span>
+              </h2>
+              <h2 className="whitespace-nowrap">
+                Subtotal - hook discount ({itemCount} items) :{' '}
+                <span className="font-bold">{total} $</span>
               </h2>
 
               {session?.user ? (

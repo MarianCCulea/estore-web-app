@@ -1,5 +1,5 @@
 'use client';
-import Dropdown from '@/components/molecules/dropdown/Dropdown';
+import Dropdown from 'app/components/molecules/dropdown/Dropdown';
 import { useSelector } from 'react-redux';
 import { selectItems } from '../../app/store/cartSlice';
 

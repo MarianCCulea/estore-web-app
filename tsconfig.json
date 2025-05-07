@@ -1,0 +1,59 @@
+{
+  "compilerOptions": {
+    "target": "ES2018",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "baseUrl": ".",
+    "paths": {
+      "atoms": [
+        "app/components/atoms"
+      ],
+      "icons": [
+        "app/components/icons"
+      ],
+      "molecules": [
+        "app/components/molecules"
+      ],
+      "organisms": [
+        "app/components/organisms"
+      ],
+    },
+    "allowSyntheticDefaultImports": true,
+    "incremental": true,
+    "strictNullChecks": true,
+    "noImplicitAny": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
+  },
+  "include": [
+    "next-env.d.ts",
+    "additional.d.ts",
+    ".eslintrc.js",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+, "app/hooks/useCartTotal.js"  ],
+  "exclude": [
+    "node_modules",
+    "app/components/lexical",
+    "templates",
+    "app/components/**/*.stories.tsx"
+  ]
+}

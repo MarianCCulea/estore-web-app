@@ -1,7 +1,7 @@
 import { StarIcon } from '@heroicons/react/24/solid';
 import Image from 'next/image';
 import Link from 'next/link';
-import AddToCartButton from './AddToCartButton';
+import AddToCartButton from '../atoms/AddToCartButton';
 
 function Product({ id, title, description, category, image, price }) {
   // const [rating] = useState(

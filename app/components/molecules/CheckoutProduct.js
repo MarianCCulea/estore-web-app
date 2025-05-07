@@ -3,7 +3,7 @@
 import { StarIcon } from '@heroicons/react/24/solid';
 import Image from 'next/image';
 import { useDispatch } from 'react-redux';
-import { removeFromCart } from '../Redux/cartSlice';
+import { removeFromCart } from '../../store/cartSlice';
 
 function CheckoutProduct({
   id,
@@ -38,8 +38,8 @@ function CheckoutProduct({
             ))}
         </div>
         <p className="my-2 text-xs line-clamp-3">{description}</p>
-        <div>{price} sadasd$</div>{' '}
-        <p className="text-lg text-black"> {quantity}</p>
+        <div>{price} $</div>{' '}
+        <p className="text-lg text-black">Quantity: {quantity}</p>
         {hasPrime && (
           <div className="flex items-center -mt-5 space-x-2">
             <Image
